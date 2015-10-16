@@ -1,0 +1,7 @@
+---
+- name: Copy the /etc/hosts file
+  template:
+   src={{ hosts_file }}
+   dest=/etc/hosts
+   owner=root group=root mode=0644
+  when: hosts_file is defined
